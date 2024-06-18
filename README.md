@@ -7,6 +7,7 @@ Most articles I read on the topic use C++ as the language of choice, but I wante
 
 ## Design choices 
 Q: Why a hash ring? 
+
 A: Consistent hashing allows for **'scalability'** . When we add/remove nodes, consistent hashing minimizes data movement. This method also helps with **'load balancing'** which is crucial for efficient utilization of resources. Also, consistent hahsing helps with the process of **'database sharding'** because when we assign key to a node, we can determine which node corresponds to which piece of data
 
 
