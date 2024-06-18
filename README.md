@@ -1,4 +1,4 @@
-# Consistent Hashing POV
+# Consistent Hashing POC
 
 Consistent hashing is a technique used to distribute data efficiently acrosss many servers. I became curious about this process, and decided to create a simple hashing model. 
 
@@ -7,6 +7,13 @@ Most articles I read on the topic use C++ as the language of choice, but I wante
 
 ## Design choices 
 Q: Why a hash ring? 
-A: Consistent hashing allows for **'scalability'** . When we add/remove nodes, consistent hashing minimizes data movement. This method also helps with **'load balancing'** which is crucial for efficient utilization of resources. Also, consistent hahsing helps with the process of **'database sharding'** because when we assign key to a node, we can determine which node corresponds to which piece of data
+
+A: Consistent hashing allows for **scalability** . When we add/remove nodes, consistent hashing minimizes data movement. This method also helps with **load balancing** which is crucial for efficient utilization of resources. Also, consistent hahsing helps with the process of **database sharding** because when we assign key to a node, we can determine which node corresponds to which piece of data
+
+
+Q: So, you've created this model as a POC, but how is it actually used in the industry?
+
+A: Distributed databases, like Cassandra use consistent hashing to ensure **high availability** and **fault tolerance**. Also, caching systems, like DynamoDB use consistent hashing to ensure that data is **evenly distributed**.
+
 
 
